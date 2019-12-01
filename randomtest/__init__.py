@@ -1,0 +1,1 @@
+from randomtest.random_test import random_score
