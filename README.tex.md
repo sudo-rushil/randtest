@@ -64,14 +64,14 @@ RandTest is a very light package. It has polymorphism support; you can pass eith
 
 RandTest identifies randomness by one of its byworded properties - unpredictability. It uses the conformance of a sequence to a continuously generated predicted model as a measure of how unpredictable - how random - that sequence is.
 
-For any sequence of numbers $a_i$, with $i$ ranging from $0$ to $n-1$, where $n$ is the length of the sequence, we can compute the element-wise gradients as a new sequence, $\delta a_i = a_{i+1} - a_i$, which has length $n-1$. 
-From here, we can apply exponential scaling, sum these gradients, and normalize to obtain the predicted gradient, $\hat{\delta a_n}$.
+For any sequence of numbers $a_i$, with $i$ ranging from $0$ to $n-1$, where $n$ is the length of the sequence, we can compute the element-wise gradients as a new sequence, $\Delta a_i = a_{i+1} - a_i$, which has length $n-1$. 
+From here, we can apply exponential scaling, sum these gradients, and normalize to obtain the predicted gradient, $\hat{\Delta a_n}$.
 
 $$
-\hat{\delta a_n} = \frac{\sum_{i=0}^{n-2}{\gamma^i \cdot \delta a_i}}{\sum_{i=0}^{n-2}{\gamma^i}}
+\hat{\Delta a_n} = \frac{\sum_{i=0}^{n-2}{\gamma^i \cdot \Delta a_i}}{\sum_{i=0}^{n-2}{\gamma^i}}
 $$
 
-Then, the predicted value $\hat{a_n}$ is $a_{n-1} + \hat{\delta a_n}$.
+Then, the predicted value $\hat{a_n}$ is $a_{n-1} + \hat{\Delta a_n}$.
 
 To compute the numerical randomness score of a sequence $a_i$, with $i$ ranging between $0$ and $n$, we take the sum
 

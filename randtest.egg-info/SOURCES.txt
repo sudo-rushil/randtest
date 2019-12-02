@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+randtest/__init__.py
+randtest/random_test.py
+randtest.egg-info/PKG-INFO
+randtest.egg-info/SOURCES.txt
+randtest.egg-info/dependency_links.txt
+randtest.egg-info/requires.txt
+randtest.egg-info/top_level.txt

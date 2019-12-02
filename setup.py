@@ -15,8 +15,8 @@ setup(
   long_description_content_type='text/markdown',
   author = 'Rushil Mallarapu',                   # Type in your name
   author_email = 'rushil.mallarapu@gmail.com',      # Type in your E-Mail
-  url = 'https://github.com/sudo-rushil/randomtest',   # Provide either the link to your github or to your website
-  download_url = 'https://github.com/sudo-rushil/randomtest/archive/v0.1.tar.gz',    # I explain this later on
+  url = 'https://github.com/sudo-rushil/randtest',   # Provide either the link to your github or to your website
+  download_url = 'https://github.com/sudo-rushil/randtest/archive/v0.1.tar.gz',    # I explain this later on
   keywords = ['random', 'sequence', 'algorithm', 'numpy', 'randomness', 'arrays', 'np', 'test', 'random test', 'randomness test', 'randtest'],
   include_package_data=True,
   install_requires=[            # I get to this in a second
