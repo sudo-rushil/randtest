@@ -1,4 +1,4 @@
-# RandomTest
+# RandTest
 
 A light package for quick and accurate determinations of the randomness of a sequence.
 
@@ -8,34 +8,34 @@ Identifying random patterns, and conversely, ordered patterns, is a major tool w
 
 ## Requirements
 
-RandomTest is built for Python 3. It has only one requirement:
+RandTest is built for Python 3. It has only one requirement:
 
     - Numpy
 
 # Installation
 
-To download randomtest, use PyPI via pip:
+To download randtest, use PyPI via pip:
 
 ```sh
-<img src="/tex/888efd2a262359b1d3d7bba728ac615e.svg?invert_in_darkmode&sanitize=true" align=middle width=526.18867455pt height=78.90410880000002pt/> git clone https://github.com/sudo-rushil/randomtest
-<img src="/tex/9a2c665c62d26207bd670efdfaecde76.svg?invert_in_darkmode&sanitize=true" align=middle width=100.28767979999999pt height=22.831056599999986pt/> python setup.py install
+<img src="/tex/1fe9c6f6ee3c4bbe953ec0f4de073788.svg?invert_in_darkmode&sanitize=true" align=middle width=526.18867455pt height=78.90410880000002pt/> git clone https://github.com/sudo-rushil/randtest
+<img src="/tex/09fec83e69520363ceb99b125a63606f.svg?invert_in_darkmode&sanitize=true" align=middle width=77.88652905pt height=22.831056599999986pt/> python setup.py install
 ```
 
 Verify your installation by running
 
 ```Python
->>> import randomtest
->>> randomtest.random_score([0, 1, 2, 3])
+>>> import randtest
+>>> randtest.random_score([0, 1, 2, 3])
 'False'
 ```
 
 # Examples
 
-RandomTest is extremely simple to use. You only need to input either a list or a 1D Numpy array of numbers. The prediction returns `False` if the sequence is ordered and `True` if the sequence is random.
+RandTest is extremely simple to use. You only need to input either a list or a 1D Numpy array of numbers. The prediction returns `False` if the sequence is ordered and `True` if the sequence is random.
 
 ```Python
 import numpy as np
-import randomtest as rt
+import randtest as rt
 
 ordered_sequence = np.arange(10)
 random_sequence = np.random.randint(10, size=10)
@@ -51,18 +51,18 @@ print(rt.random_score(random_sequence))
 
 # Documentation
 
-RandomTest is a very light package. It has polymorphism support; you can pass either a list or a 1D Numpy array without any effort. It is also extremely fast, returning predictions in under 100 milliseconds, even in extreme cases.
+RandTest is a very light package. It has polymorphism support; you can pass either a list or a 1D Numpy array without any effort. It is also extremely fast, returning predictions in under 100 milliseconds, even in extreme cases.
 
 ## Algorithm
 
-RandomTest identifies randomness by one of its byworded properties - unpredictability. It uses the conformance of a sequence to a continuously generated predicted model as a measure of how unpredictable - how random - that sequence is.
+RandTest identifies randomness by one of its byworded properties - unpredictability. It uses the conformance of a sequence to a continuously generated predicted model as a measure of how unpredictable - how random - that sequence is.
 
-For any sequence of numbers <img src="/tex/65ed4b231dcf18a70bae40e50d48c9c0.svg?invert_in_darkmode&sanitize=true" align=middle width=13.340053649999989pt height=14.15524440000002pt/>, with <img src="/tex/77a3b857d53fb44e33b53e4c8b68351a.svg?invert_in_darkmode&sanitize=true" align=middle width=5.663225699999989pt height=21.68300969999999pt/> ranging from <img src="/tex/29632a9bf827ce0200454dd32fc3be82.svg?invert_in_darkmode&sanitize=true" align=middle width=8.219209349999991pt height=21.18721440000001pt/> to <img src="/tex/efcf8d472ecdd2ea56d727b5746100e3.svg?invert_in_darkmode&sanitize=true" align=middle width=38.17727759999999pt height=21.18721440000001pt/>, where <img src="/tex/55a049b8f161ae7cfeb0197d75aff967.svg?invert_in_darkmode&sanitize=true" align=middle width=9.86687624999999pt height=14.15524440000002pt/> is the length of the sequence, we can compute the element-wise gradients as a new sequence, <img src="/tex/30fb58c9b957f8805e55d21e9266aaff.svg?invert_in_darkmode&sanitize=true" align=middle width=100.31668679999999pt height=19.1781018pt/>, which has length <img src="/tex/efcf8d472ecdd2ea56d727b5746100e3.svg?invert_in_darkmode&sanitize=true" align=middle width=38.17727759999999pt height=21.18721440000001pt/>. 
-From here, we can apply exponential scaling, sum these gradients, and normalize to obtain the predicted gradient, <img src="/tex/767f0028f3b63c69363041aac83b9bce.svg?invert_in_darkmode&sanitize=true" align=middle width=16.81517804999999pt height=22.831056599999986pt/>.
+For any sequence of numbers <img src="/tex/65ed4b231dcf18a70bae40e50d48c9c0.svg?invert_in_darkmode&sanitize=true" align=middle width=13.340053649999989pt height=14.15524440000002pt/>, with <img src="/tex/77a3b857d53fb44e33b53e4c8b68351a.svg?invert_in_darkmode&sanitize=true" align=middle width=5.663225699999989pt height=21.68300969999999pt/> ranging from <img src="/tex/29632a9bf827ce0200454dd32fc3be82.svg?invert_in_darkmode&sanitize=true" align=middle width=8.219209349999991pt height=21.18721440000001pt/> to <img src="/tex/efcf8d472ecdd2ea56d727b5746100e3.svg?invert_in_darkmode&sanitize=true" align=middle width=38.17727759999999pt height=21.18721440000001pt/>, where <img src="/tex/55a049b8f161ae7cfeb0197d75aff967.svg?invert_in_darkmode&sanitize=true" align=middle width=9.86687624999999pt height=14.15524440000002pt/> is the length of the sequence, we can compute the element-wise gradients as a new sequence, <img src="/tex/42594fd625b840fdf044ad50aba26549.svg?invert_in_darkmode&sanitize=true" align=middle width=108.24475859999997pt height=22.831056599999986pt/>, which has length <img src="/tex/efcf8d472ecdd2ea56d727b5746100e3.svg?invert_in_darkmode&sanitize=true" align=middle width=38.17727759999999pt height=21.18721440000001pt/>. 
+From here, we can apply exponential scaling, sum these gradients, and normalize to obtain the predicted gradient, <img src="/tex/58277aab3ef7a222abc6d1eacc64992b.svg?invert_in_darkmode&sanitize=true" align=middle width=24.743248199999986pt height=31.50689519999998pt/>.
 
-<p align="center"><img src="/tex/1bbbdde0d6a5d7b8dc52772af1d1670c.svg?invert_in_darkmode&sanitize=true" align=middle width=128.32365479999999pt height=45.82666275pt/></p>
+<p align="center"><img src="/tex/a4b5f035a1b710941529d24f1ad28f32.svg?invert_in_darkmode&sanitize=true" align=middle width=144.1797852pt height=45.82666275pt/></p>
 
-Then, the predicted value <img src="/tex/28d65fd9ccc424e34ec4f277701115a2.svg?invert_in_darkmode&sanitize=true" align=middle width=16.81517804999999pt height=22.831056599999986pt/> is <img src="/tex/7ccf2d687740129b5803a78f88341878.svg?invert_in_darkmode&sanitize=true" align=middle width=71.36999924999998pt height=22.831056599999986pt/>.
+Then, the predicted value <img src="/tex/28d65fd9ccc424e34ec4f277701115a2.svg?invert_in_darkmode&sanitize=true" align=middle width=16.81517804999999pt height=22.831056599999986pt/> is <img src="/tex/206f0ba07bd0c47bdcba991cce18e7b4.svg?invert_in_darkmode&sanitize=true" align=middle width=79.29807104999999pt height=31.50689519999998pt/>.
 
 To compute the numerical randomness score of a sequence <img src="/tex/65ed4b231dcf18a70bae40e50d48c9c0.svg?invert_in_darkmode&sanitize=true" align=middle width=13.340053649999989pt height=14.15524440000002pt/>, with <img src="/tex/77a3b857d53fb44e33b53e4c8b68351a.svg?invert_in_darkmode&sanitize=true" align=middle width=5.663225699999989pt height=21.68300969999999pt/> ranging between <img src="/tex/29632a9bf827ce0200454dd32fc3be82.svg?invert_in_darkmode&sanitize=true" align=middle width=8.219209349999991pt height=21.18721440000001pt/> and <img src="/tex/55a049b8f161ae7cfeb0197d75aff967.svg?invert_in_darkmode&sanitize=true" align=middle width=9.86687624999999pt height=14.15524440000002pt/>, we take the sum
 
@@ -70,15 +70,15 @@ To compute the numerical randomness score of a sequence <img src="/tex/65ed4b231
 
 where the predicted value <img src="/tex/b22ec94b5bdaa79af222bfafdd3f2110.svg?invert_in_darkmode&sanitize=true" align=middle width=15.95518319999999pt height=22.831056599999986pt/> comes from the sliced subsequence of <img src="/tex/44bc9d542a92714cac84e01cbbb7fd61.svg?invert_in_darkmode&sanitize=true" align=middle width=8.68915409999999pt height=14.15524440000002pt/> containing all elements up to <img src="/tex/63bb9849783d01d91403bc9a5fea12a2.svg?invert_in_darkmode&sanitize=true" align=middle width=9.075367949999992pt height=22.831056599999986pt/>.
 
-In the RandomTest implementation, this randomness score is converted into a prediction by comparision with an empirically determiend threshold, which is chosen to maximize the combined precision and sensitivity of the classifier on both random and ordered sequences.
+In the RandTest implementation, this randomness score is converted into a prediction by comparision with an empirically determiend threshold, which is chosen to maximize the combined precision and sensitivity of the classifier on both random and ordered sequences.
 
 ## API
 
-RandomTest contains a single function, `random_score`. This returns `True` if the input sequence *is* random. This means it can be integrated directly into your current control flow.
+RandTest contains a single function, `random_score`. This returns `True` if the input sequence *is* random. This means it can be integrated directly into your current control flow.
 
 ```Python
 import numpy as np
-from randomtest import random_score
+from randtest import random_score
 
 # Ordered sequences
 random_score(np.arange(10)) # False
