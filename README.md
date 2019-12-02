@@ -77,7 +77,7 @@ To compute the numerical randomness score of a sequence <img src="/tex/65ed4b231
 
 where the predicted value <img src="/tex/b22ec94b5bdaa79af222bfafdd3f2110.svg?invert_in_darkmode&sanitize=true" align=middle width=15.95518319999999pt height=22.831056599999986pt/> comes from the sliced subsequence of <img src="/tex/44bc9d542a92714cac84e01cbbb7fd61.svg?invert_in_darkmode&sanitize=true" align=middle width=8.68915409999999pt height=14.15524440000002pt/> containing all elements up to <img src="/tex/63bb9849783d01d91403bc9a5fea12a2.svg?invert_in_darkmode&sanitize=true" align=middle width=9.075367949999992pt height=22.831056599999986pt/>.
 
-In the RandTest implementation, this randomness score is converted into a prediction by comparision with an empirically determiend threshold, which is chosen to maximize the combined precision and sensitivity of the classifier on both random and ordered sequences.
+In the RandTest implementation, this randomness score is converted into a prediction by comparision with an empirically determined threshold, which is chosen to maximize the combined precision and sensitivity of the classifier on both random and ordered sequences.
 
 ## API
 
