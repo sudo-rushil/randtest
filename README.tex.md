@@ -1,6 +1,6 @@
 # RandTest
 
-A light package for quick and accurate determinations of the randomness of a sequence.
+A lightweight package for quick and accurate determinations of the randomness of a sequence.
 
 # Overview
 
@@ -17,15 +17,15 @@ RandTest is built for Python 3. It has only one requirement:
 To download randtest, use PyPI via pip:
 
 ```sh
-\$ pip install randtest
+pip install randtest
 ```
 
 Alternatively, you can clone this Github repository and build from source:
 
 ```sh
-\$ git clone https://github.com/sudo-rushil/randtest
-\$ cd randtest
-\$ python setup.py install
+git clone https://github.com/sudo-rushil/randtest
+cd randtest
+python setup.py install
 ```
 
 Verify your installation by running
@@ -58,7 +58,7 @@ print(rt.random_score(random_sequence))
 
 # Documentation
 
-RandTest is a very light package. It has polymorphism support; you can pass either a list or a 1D Numpy array without any effort. It is also extremely fast, returning predictions in under 100 milliseconds, even in extreme cases.
+RandTest is a very lightweight package. It has polymorphism support; you can pass either a list or a 1D Numpy array without any effort. It is also extremely fast, returning predictions in under 100 milliseconds, even in extreme cases.
 
 ## Algorithm
 

@@ -1,23 +1,24 @@
+
 from setuptools import setup
 from os import path
 
-# this_directory = path.abspath(path.dirname(__file__))
-# with open(path.join(this_directory, 'PREADME.md'), encoding='utf-8') as f:
-#     long_description = f.read()
+this_directory = path.abspath(path.dirname(__file__))
+with open(path.join(this_directory, 'PREADME.md'), encoding='utf-8') as f:
+    long_description = f.read()
 
 setup(
   name = 'randtest',         # How you named your package folder (MyLib)
   packages = ['randtest'],   # Chose the same as "name"
-  version = '0.4',      # Start with a small number and increase it with every change you make
+  version = '0.7',      # Start with a small number and increase it with every change you make
   license='MIT',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
   description = 'Quick and accurate determinations of the randomness of a sequence',   # Give a short description about your library
-  # long_description = long_description,
-  # long_description_content_type='text/markdown',
+  long_description = long_description,
+  long_description_content_type='text/markdown',
   author = 'Rushil Mallarapu',                   # Type in your name
   author_email = 'rushil.mallarapu@gmail.com',      # Type in your E-Mail
   url = 'https://github.com/sudo-rushil/randtest',   # Provide either the link to your github or to your website
-  download_url = 'https://github.com/sudo-rushil/randtest/archive/v0.4.tar.gz',    # I explain this later on
-  keywords = ['random', 'sequence', 'algorithm', 'numpy', 'randomness', 'arrays', 'np', 'test', 'random test', 'randomness test', 'randtest'],
+  download_url = 'https://github.com/sudo-rushil/randtest/archive/v0.7.tar.gz',    # I explain this later on
+  keywords = ['random', 'python', 'sequence', 'algorithm', 'numpy', 'randomness', 'arrays', 'np', 'test', 'random test', 'randomness test', 'randtest'],
   include_package_data=True,
   install_requires=[            # I get to this in a second
           'numpy',

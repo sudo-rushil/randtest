@@ -1,1 +1,2 @@
 recursive-include randtest *.py
+include PREADME.md
