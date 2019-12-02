@@ -1,1 +1,1 @@
-from randomtest.random_test import random_score
+from randtest.random_test import random_score

@@ -1,12 +1,12 @@
 Metadata-Version: 2.1
 Name: randtest
-Version: 0.1
+Version: 0.3
 Summary: Quick and accurate determinations of the randomness of a sequence
 Home-page: https://github.com/sudo-rushil/randtest
 Author: Rushil Mallarapu
 Author-email: rushil.mallarapu@gmail.com
 License: MIT
-Download-URL: https://github.com/sudo-rushil/randtest/archive/v0.1.tar.gz
+Download-URL: https://github.com/sudo-rushil/randtest/archive/v0.3.tar.gz
 Description: # RandTest
         
         A light package for quick and accurate determinations of the randomness of a sequence.

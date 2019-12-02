@@ -81,7 +81,7 @@ $$
 
 where the predicted value $\hat{a_k}$ comes from the sliced subsequence of $a$ containing all elements up to $k$.
 
-In the RandTest implementation, this randomness score is converted into a prediction by comparision with an empirically determiend threshold, which is chosen to maximize the combined precision and sensitivity of the classifier on both random and ordered sequences.
+In the RandTest implementation, this randomness score is converted into a prediction by comparision with an empirically determined threshold, which is chosen to maximize the combined precision and sensitivity of the classifier on both random and ordered sequences.
 
 ## API
 
