@@ -63,7 +63,7 @@ RandomTest is a very light package. It has polymorphism support; you can pass ei
 ## Algorithm
 
 RandomTest identifies randomness by one of its byworded properties - unpredictability. It uses the conformance of a sequence to a continuously generated predicted model as a measure of how unpredictable - how random - that sequence is.
-
+```math
 For any sequence of numbers $a_i$, with $i$ ranging from $0$ to $n-1$, where $n$ is the length of the sequence, we can compute the element-wise gradients as a new sequence, $\del a_i = a_{i+1} - a_i$, which has length $n-1$. From here, we can apply exponential scaling, sum these gradients, and normalize to obtain the predicted gradient, $\hat{\del a_n}$.
 
 $$
@@ -79,6 +79,7 @@ $$
 $$
 
 where the predicted value $\hat{a_k}$ comes from the sliced subsequence of $a$ containing all elements up to $k$.
+```
 
 In the RandomTest implementation, this randomness score is converted into a prediction by comparision with an empirically determiend threshold, which is chosen to maximize the combined precision and sensitivity of the classifier on both random and ordered sequences.
 
