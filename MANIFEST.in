@@ -1,1 +1,1 @@
-recursive-include randomtest *.py
+recursive-include randtest *.py
