@@ -17,8 +17,15 @@ RandTest is built for Python 3. It has only one requirement:
 To download randtest, use PyPI via pip:
 
 ```sh
-<img src="/tex/1fe9c6f6ee3c4bbe953ec0f4de073788.svg?invert_in_darkmode&sanitize=true" align=middle width=526.18867455pt height=78.90410880000002pt/> git clone https://github.com/sudo-rushil/randtest
-<img src="/tex/09fec83e69520363ceb99b125a63606f.svg?invert_in_darkmode&sanitize=true" align=middle width=77.88652905pt height=22.831056599999986pt/> python setup.py install
+\$ pip install randtest
+```
+
+Alternatively, you can clone this Github repository and build from source:
+
+```sh
+\$ git clone https://github.com/sudo-rushil/randtest
+\$ cd randtest
+\$ python setup.py install
 ```
 
 Verify your installation by running
