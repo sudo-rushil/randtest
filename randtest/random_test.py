@@ -1,17 +1,20 @@
+'''
+Main code for the random_test module.
+'''
 import numpy as np
 
 def _input(seq):
-    if type(seq) == list:
+    if isinstance(seq, list):
         return np.array(seq)
 
-    assert type(seq) == np.ndarray, 'Input is not a list or a Numpy array'
+    assert isinstance(seq, np.ndarray), 'Input is not a list or a Numpy array'
     assert len(seq.shape) == 1, 'Input is not a one-dimensional Numpy array'
 
     return seq
 
 def _geom_vec(seq, gamma=0.2):
-    n = seq.shape[0]
-    return np.geomspace(1, (gamma**(n-1) + 0.001), num=n)[::-1]
+    seq_length = seq.shape[0]
+    return np.geomspace(1, (gamma**(seq_length-1) + 0.001), num=seq_length)[::-1]
 
 def _seq2grad(seq):
     return seq[1:] - seq[:-1]
@@ -21,7 +24,7 @@ def _spread(seq):
 
 def _predict(seq):
     grads = _seq2grad(seq)
-    geom = _geom_vec(moments)
+    geom = _geom_vec(grads)
     return seq[-1] + np.dot(grads, geom)/geom.sum()
 
 def _randscore(seq):
@@ -31,12 +34,11 @@ def _randscore(seq):
         score += abs(nxt - seq[i])
     return score/_spread(seq)
 
-def _threshold(seq, T=1.955):
-    return _randscore(seq) >= T
+def _threshold(seq, threshold=1.955):
+    return _randscore(seq) >= threshold
 
-def random_score(seq, raw=False, T=1.955):
+def random_score(seq, raw=False, threshold=1.955):
     seq = _input(seq)
     if raw:
         return _randscore(seq)
-    else:
-        return _threshold(seq, T)
+    return _threshold(seq, threshold)
